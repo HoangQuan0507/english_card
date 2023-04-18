@@ -9,7 +9,6 @@ import 'package:english_card/values/app_styles.dart';
 import 'package:english_card/values/share_keys.dart';
 import 'package:english_card/widgets/app_button.dart';
 import 'package:english_words/english_words.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
@@ -232,6 +231,7 @@ class _HomePageState extends State<HomePage> {
                                         fontFamily: FontFamily.sen,
                                         fontSize: 89,
                                         fontWeight: FontWeight.bold,
+                                        color: Colors.white,
                                         shadows: [
                                           BoxShadow(
                                               color: Colors.black38,
@@ -244,6 +244,7 @@ class _HomePageState extends State<HomePage> {
                                           style: TextStyle(
                                               fontFamily: FontFamily.sen,
                                               fontSize: 56,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.bold,
                                               shadows: [
                                                 BoxShadow(
