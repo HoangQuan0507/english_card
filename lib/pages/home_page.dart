@@ -10,6 +10,7 @@ import 'package:english_card/values/share_keys.dart';
 import 'package:english_card/widgets/app_button.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -316,8 +317,8 @@ class _HomePageState extends State<HomePage> {
                 child: AppButton(
                     label: 'Favorites',
                     onTap: () {
-                      if (words[_currentIndex].isFavorite == Colors.red) {
-
+                      if (kDebugMode) {
+                        print('Favorites');
                       }
                     }),
               ),
@@ -353,5 +354,21 @@ class _HomePageState extends State<HomePage> {
           ]),
     );
   }
+  // Widget buildIndicator(bool isActive, Size size) {
+  //   return AnimatedContainer(
+  //     duration: Duration(microseconds: 300),
+  //     curve: Curves.bounceInOut,
+  //     height: 8,
+  //     margin: const EdgeInsets.symmetric(horizontal: 10),
+  //     width: isActive ? size.width * 1 / 5 : 32,
+  //     decoration: BoxDecoration(
+  //       color: isActive ? AppColors.lighBlue : AppColors.lightGrey,
+  //       borderRadius: BorderRadius.all(Radius.circular(12)),
+  //       boxShadow: [
+  //         BoxShadow(color: Colors.black38, offset: Offset(2, 3), blurRadius: 3)
+  //       ],
+  //     ),
+  //   );
+  //}
 
 }
